@@ -32,7 +32,8 @@ ScrollTrigger.refresh();
 locomotiveAnimation()
 
 function navbarAnimation(){
-    gsap.to("#nav1 svg",{
+    var g = gsap.timeline();
+    g.to("#nav1 svg",{
         transform:"translateY(-100%)",
         scrollTrigger:{
             trigger:"#page1",
@@ -140,23 +141,59 @@ function elemBoxAnimation(){
 }
 elemBoxAnimation()
 
-// var g1 = gsap.timeline({
-//     scrollTrigger:{
-//         trigger:"#page1 #caption",
-//         scroller:"#main",
-//         markers:true,
-//         start:"top 30%",
-//         end:"top 50%",
-//         scrub:3,
-//     }
-// })
 
-gsap.from("#page2",{
+gsap.from("#page2 #elements .elem",{
     opacity:0,
-    stagger:0.4,
+    stagger:0.1,
+    x:20,
     scrollTrigger:{
-        trigger:"#page2 #elements",
-        scroller:"main",
-        markers:true,
+        trigger:"#page2",
+        scroller:"#main",
+        //markers:true,
+        start:"top 60%",
+        end:"top 40%",
+        scrub:2,
+    }
+})
+gsap.from("#page3 .child",{
+    opacity:0,
+    stagger:0.2,
+    scrollTrigger:{
+        trigger:"#page3",
+        scroller:"#main",
+        // markers:true,
+        start:"top 50%",
+        end:"top 40%",
+        scrub:1,
+    }
+})
+var t1=gsap.timeline();
+t1.from("#page4 .reviewbox h1",{
+    opacity:0,
+    y:20,
+    stagger:0.5,
+    delay:2,
+    duration:0.9,
+    scrollTrigger:{
+        trigger:"#page4",
+        scroller:"#main",
+        start:"top 70%",
+        //markers:true,
+        end:"top 50%",
+        scrub:1,
+    }
+})
+var t2=gsap.timeline();
+t2.from("#footer #footer-container #flogo svg",{
+    opacity:0,
+    rotate:90,
+    duration:0.9,
+    scrollTrigger:{
+        trigger:"#footer",
+        scroller:"#main",
+        start:"top 20%",
+        end:"top 0%",
+        //markers:true,
+        scrub:1,
     }
 })
