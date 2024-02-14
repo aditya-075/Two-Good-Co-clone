@@ -1,0 +1,436 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+*::selection{
+    color:#fff;
+    background-color: #000;
+}
+html,body{
+    height: 100%;
+    width:100%;
+}
+body{
+    background-color: #F7F7F7;
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 20;
+    padding: 23px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+#nav1{
+    height: 83px;
+    overflow: hidden;
+}
+#nav1 svg{
+    display: block;
+}
+#nav #nav2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:40px;
+}
+#links{
+    padding:10px;
+}
+#nav #nav2 #links a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #080606;
+    font-size: 13px;
+    font-weight: 500;
+    margin:0 25px;
+}
+#icons{
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #F7F7F7;
+}
+#nav #nav2 #icons i{
+    font-size: 18px;
+    margin:0 20px;
+    font-weight: 100;
+}
+
+#cursor{
+    height:180px;
+    width: 180px;
+    border-radius: 50%;
+    background-color:#987474df;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+}
+#page1 {
+    min-height: 100vh;
+    /* background-color: aqua; */
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 20vh;
+}
+#page1 h1 {
+    font-size: 15.8vw;
+    text-transform: uppercase;
+    font-family: futura;
+    line-height: 14vw;
+    letter-spacing:-8px;
+}
+#video-container{
+    height:100%;
+    width:100%;
+    /*background-color: gray;*/
+    margin-top: 1vw;
+    position: relative;
+}
+#video-container video{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    z-index: 5;
+}
+#video-container #play{
+    background-color: #000;
+    color: #fff;
+    font-size:1.3vw;
+    padding:3vw 2.3vw;
+    position:absolute;
+    border-radius: 50%;
+    font-family: Futura;
+    opacity:0;
+    scale:0;
+    z-index: 10;
+}
+.caption{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top:4vw;
+    font-size: 0.8vw;
+    border-bottom: 1.5px solid #000000;
+    font-weight: 500;
+}
+#page2{
+    min-height:100vh;
+    width:100%;
+    position: relative;
+}
+#page2 #elements{
+    display: flex;
+    align-items: center;
+    padding:3vw 1vw;
+    justify-content: space-between;
+}
+#page2 .elem{
+    height: 100%;
+    width:32.3%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#page2 .elem img{
+    height:100%;
+    width:100%;
+    object-fit: cover;
+    scale:1.2;
+}
+#page2 .elem .box{
+    height: 50px;
+    width:65%;
+    position: absolute;
+    z-index: 12;
+    background: #ffffffe6;
+    border-radius: 40px;
+    backdrop-filter: blur;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#page2 .elem .box .circle{
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #111;
+}
+#page2 .elem .box h2{
+    font-weight: 400;
+    font-size: 1vw;
+}
+#page2 .elem .box h1{
+    font-weight: 550;
+    font-size: 1vw;
+}    
+#page2 .elem .box:hover{
+    height:220px;
+}
+#page2 #writing{
+    display: flex;
+    align-items:flex-start;
+    justify-content:space-between ;
+    padding:2vw 2vw;
+}
+#page2 #writingPart1 h3{
+    font-family:futura;
+    font-size: 3.5vw;
+    height:40vh;
+    width:50vw;
+    line-height: 3.5vw ;
+}
+#page2 #writingPart2 p{
+    width:24vw;
+    color: rgb(53, 51, 51);
+    font-size:1.1vw;
+    margin-right:8vw;
+    line-height:1.5vw ;
+}
+#page2 #writingPart2 a{
+    text-decoration: none;
+    color:rgb(71, 70, 70);
+    font-family:helvetica;
+    font-size: 0.8vw;
+    padding-bottom: 0.4vw;
+    border-bottom: 1px solid rgb(71, 70, 70);
+}
+#page3 {
+    min-height: 200vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child {
+    height: 72vh;
+    width: 50vw;
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.child h5{
+    position: absolute;
+    text-align: center;
+    font-weight: 400;
+    top:105%;
+    color: rgb(63, 63, 63);
+}
+.child p{
+    position: absolute;
+    text-align: center;
+    font-size: 0.9vw;
+    top:111%;
+    color: rgb(63, 63, 63);
+}
+.child img {
+    height: 100%;
+}
+#page3 #caption2{
+    gap:76vw;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: coral;
+}
+@media (max-width:600px){
+    #nav{
+        width: 100%;
+        position: fixed;
+        z-index: 20;
+        padding: 13px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    #nav1{
+        height: 67px;
+        overflow: hidden;
+    }
+    #nav1 svg{
+        display: block;
+        height:67px;
+        width:80px;
+    }
+    #nav #twogoodlogo{
+        height:38px;
+        margin-left:-19px;
+    }
+    #nav #nav2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap:40px;
+    }
+     #links{
+        padding:8px;
+        display: none;
+    }
+    /* #nav #nav2 #links a{
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #080606;
+        font-size: 13px;
+        font-weight: 500;
+        margin:0 25px;
+    } */ 
+    #icons{
+        padding: 7px;
+        border-radius: 50px;
+        background-color: #F7F7F7;
+    }
+    #nav #nav2 #icons i{
+        font-size: 15px;
+        margin:0 20px;
+        font-weight: 100;
+    }
+#page1 {
+    min-height: 70vh;
+    width: 100%;
+    padding: 0 3.55vw;
+    padding-top: 25vh;
+}
+#page1 h1 {
+    font-size: 15.8vw;
+    line-height: 14vw;
+    letter-spacing:-3px;
+}
+#video-container{
+    height:30vh;
+    width:100%;
+    /*background-color: gray;*/
+    margin-top: 3vw;
+    position: relative;
+}
+#video-container #play{    
+    font-size:4vw;
+    padding:9vw 6.7vw;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+    opacity:1;
+    scale:1;
+}
+#page1 #caption p{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:4vw;
+    font-size: 3vw;
+    font-weight: 500;
+}
+#page2{
+    min-height:100vh;
+    width:100%;
+    position: relative;
+    padding:4vw 3.55vw;
+    
+}
+#page2 #elements{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#page2 .elem{
+    height: 100vh;
+    width:100%;
+    overflow: hidden;
+    margin-bottom: 5vw;
+}
+#page2 .elem .box{
+    height: 45px;
+    width:75%;
+}
+#page2 #writing{
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    justify-content: center;
+}
+#page2 #writingPart1 h3{
+    height:26vh;
+    font-size: 8vw;
+    width:100%;
+    line-height: 9vw;
+}
+#page2 #writingPart2 p{
+    width:100%;
+    color: rgb(53, 51, 51);
+    font-size:4vw;
+    margin-right:8vw;
+    line-height:5vw ;
+}
+#page2 #writingPart2 a{
+    text-decoration: none;
+    color:rgb(71, 70, 70);
+    font-size: 3vw;
+    border-bottom: 1px solid rgb(71, 70, 70);
+    padding-bottom:1.5vw;
+}
+#page3 {
+    min-height: 70vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.child {
+    height: 18vh;
+    width: 40vw;
+    /* background-color: red; */
+    /* border: 2px solid #000; */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10vw 3vw;
+}
+.child h5{
+    position: absolute;
+    font-weight: 400;
+    top:105%;
+}
+.child p{
+    position: absolute;
+    font-size: 3vw;
+    top:135%;
+}
+.child img{
+    height: 100%;
+}
+.caption{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top:4vw;
+    font-size: 3vw;
+    border-bottom: 1.5px solid #000000;
+    font-weight: 500;
+}
+#page3 #caption2{
+    font-size: 3vw;
+    margin:30vw 5vw;
+    gap: 37vw;
+}
+}
