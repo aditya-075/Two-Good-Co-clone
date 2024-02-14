@@ -158,6 +158,7 @@ gsap.from("#page2 #elements .elem",{
 gsap.from("#page3 .child",{
     opacity:0,
     stagger:0.2,
+    x:-40,
     scrollTrigger:{
         trigger:"#page3",
         scroller:"#main",
